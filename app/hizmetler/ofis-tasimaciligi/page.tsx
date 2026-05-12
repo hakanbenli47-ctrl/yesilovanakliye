@@ -17,11 +17,14 @@ import {
   Truck,
 } from "lucide-react";
 
+
 const firma = {
   ad: "YEŞİLOVA NAKLİYAT",
   telefon: "0555 555 55 55",
   whatsapp: "905555555555",
-  konum: "İstanbul / Türkiye",
+  konum: "YEŞİLOVA NAKLİYAT • Yeşilova Mahallesi / İstanbul",
+  mapsLink:
+    "https://www.google.com/maps/place/YE%C5%9E%C4%B0LOVA+NAKL%C4%B0YAT-+%C4%B0STANBUL/@41.006394,28.6935971,17z/data=!3m1!4b1!4m6!3m5!1s0x14caa10064a901e9:0x3bf2ea107d200dc5!8m2!3d41.00639!4d28.696172!16s%2Fg%2F11ybfb7j8d",
   heroGorsel: "/ofis-tasima.jpg",
 };
 
@@ -476,7 +479,53 @@ export default function OfisTasimaciligiPage() {
           </div>
         </motion.div>
       </section>
+ <section className="bg-white px-4 pb-16 sm:pb-20">
+        <motion.div
+          variants={fadeUp}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.22 }}
+          className="mx-auto max-w-7xl overflow-hidden rounded-[1.8rem] border border-emerald-100 shadow-2xl shadow-emerald-900/10 sm:rounded-[2.5rem]"
+        >
+          <div className="grid lg:grid-cols-[0.9fr_1.1fr]">
+            <div className="bg-[#10251b] p-6 text-white sm:p-10">
+              <p className="text-xs font-black uppercase tracking-[0.28em] text-emerald-300 sm:text-sm">
+                Konumumuz
+              </p>
 
+              <h2 className="mt-4 text-3xl font-black leading-tight sm:text-5xl">
+                Bizi haritada kolayca bulun.
+              </h2>
+
+              <p className="mt-5 text-base font-medium leading-8 text-white/70 sm:text-lg">
+                YEŞİLOVA NAKLİYAT olarak İstanbul merkezli hizmet veriyoruz.
+                Konumumuzu inceleyebilir, tek tıkla yol tarifi oluşturabilirsiniz.
+              </p>
+
+              <a
+                href={firma.mapsLink}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-8 inline-flex rounded-2xl bg-emerald-400 px-7 py-4 text-sm font-black text-[#10251b] shadow-xl shadow-emerald-400/25 transition hover:-translate-y-1"
+              >
+                Google Maps’te Aç
+              </a>
+            </div>
+
+            <div className="relative min-h-[360px]">
+              <iframe
+                src="https://www.google.com/maps?q=41.00639,28.696172&z=16&output=embed"
+                width="100%"
+                height="100%"
+                loading="lazy"
+                allowFullScreen
+                referrerPolicy="no-referrer-when-downgrade"
+                className="absolute inset-0 h-full w-full border-0"
+              />
+            </div>
+          </div>
+        </motion.div>
+      </section>
       <footer className="bg-[#10251b] px-4 py-10 text-white">
         <div className="mx-auto flex max-w-7xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div>

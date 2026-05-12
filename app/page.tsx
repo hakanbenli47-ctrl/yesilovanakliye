@@ -67,7 +67,7 @@ const hizmetler = [
     baslik: "Parça Eşya Taşıma",
     aciklama:
       "Az hacimli yükler, tekil ürünler ve özel teslimatlar için ekonomik taşıma çözümü.",
-    gorsel: "/parca-esya.jpg",
+    gorsel: "/parca-esy.jpg",
     link: "/hizmetler/parca-esya-tasima",
   },
 ];
@@ -331,104 +331,74 @@ export default function Home() {
         </AnimatePresence>
       </header>
 
-      <section className="relative overflow-hidden bg-[#10251b] px-4 py-16 sm:py-20 lg:py-24">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,#34d39944,transparent_28%),radial-gradient(circle_at_80%_10%,#a3e63533,transparent_25%)]" />
+     <section className="relative overflow-hidden bg-[#10251b] px-4 py-16 sm:py-20 lg:py-24">
+  <div className="absolute inset-0">
+    <Image
+      src={firma.heroGorsel}
+      alt={firma.ad}
+      fill
+      priority
+      sizes="100vw"
+     className="object-cover opacity-[0.42] scale-105"
+    />
 
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1 }}
-          className="absolute inset-0 bg-[linear-gradient(120deg,transparent,rgba(255,255,255,0.06),transparent)]"
-        />
+  <div className="absolute inset-0 bg-gradient-to-r from-[#08150f]/78 via-[#10251b]/58 to-[#10251b]/35" />
+<div className="absolute inset-0 bg-gradient-to-t from-[#10251b]/70 via-transparent to-transparent" />
+  </div>
 
-        <div className="relative mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[1fr_0.9fr]">
-          <motion.div
-            variants={leftReveal}
-            initial="hidden"
-            animate="show"
-            className="relative z-10"
-          >
-            <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-emerald-300/30 bg-white/10 px-4 py-2 text-[10px] font-black uppercase tracking-[0.22em] text-emerald-200 sm:text-xs">
-              <Sparkles className="h-4 w-4" />
-              İstanbul Merkezli Profesyonel Taşıma
-            </div>
+  <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,#34d39933,transparent_28%),radial-gradient(circle_at_80%_10%,#a3e63522,transparent_25%)]" />
 
-            <h1 className="max-w-4xl text-4xl font-black leading-tight tracking-tight text-white sm:text-6xl lg:text-7xl">
-              Taşıma sürecini şansa bırakmayın.
-              <span className="block bg-gradient-to-r from-emerald-300 via-lime-200 to-white bg-[length:240%_100%] bg-clip-text text-transparent animate-[textFlow_5s_linear_infinite]">
-                Planlı, güvenli, zamanında.
-              </span>
-            </h1>
+  <motion.div
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ duration: 1 }}
+    className="absolute inset-0 bg-[linear-gradient(120deg,transparent,rgba(255,255,255,0.04),transparent)]"
+  />
 
-            <p className="mt-6 max-w-2xl text-base font-medium leading-8 text-white/75 sm:text-lg">
-              {firma.ad}; şehir içi, şehirler arası, kurumsal, tekstil, parça
-              eşya, koli ve paletli taşımacılık alanlarında düzenli operasyon
-              yönetimi sunar.
-            </p>
+  <div className="relative mx-auto max-w-7xl">
+    <motion.div
+      variants={leftReveal}
+      initial="hidden"
+      animate="show"
+      className="relative z-10 max-w-4xl"
+    >
+      <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-emerald-300/30 bg-white/10 px-4 py-2 text-[10px] font-black uppercase tracking-[0.22em] text-emerald-200 sm:text-xs">
+        <Sparkles className="h-4 w-4" />
+        İstanbul Merkezli Profesyonel Taşıma
+      </div>
 
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <a
-                href={wp}
-                target="_blank"
-                rel="noreferrer"
-                className="rounded-2xl bg-emerald-400 px-7 py-4 text-center text-sm font-black text-[#10251b] shadow-xl shadow-emerald-400/25 transition hover:-translate-y-1"
-              >
-                WhatsApp’tan Teklif Al
-              </a>
+      <h1 className="max-w-4xl text-4xl font-black leading-tight tracking-tight text-white sm:text-6xl lg:text-7xl">
+        Taşıma sürecini şansa bırakmayın.
+        <span className="block bg-gradient-to-r from-emerald-300 via-lime-200 to-white bg-[length:240%_100%] bg-clip-text text-transparent animate-[textFlow_5s_linear_infinite]">
+          Planlı, güvenli, zamanında.
+        </span>
+      </h1>
 
-              <a
-                href={`tel:${firma.telefon.replaceAll(" ", "")}`}
-                className="rounded-2xl border border-white/20 bg-white/10 px-7 py-4 text-center text-sm font-black text-white backdrop-blur transition hover:-translate-y-1"
-              >
-                Hemen Ara
-              </a>
-            </div>
-          </motion.div>
+      <p className="mt-6 max-w-2xl text-base font-medium leading-8 text-white/75 sm:text-lg">
+        {firma.ad}; şehir içi, şehirler arası, kurumsal, tekstil, parça eşya,
+        koli ve paletli taşımacılık alanlarında düzenli operasyon yönetimi sunar.
+      </p>
 
-          <motion.div
-            variants={rightReveal}
-            initial="hidden"
-            animate="show"
-            className="relative z-10"
-          >
-            <div className="absolute -inset-4 rounded-[2rem] bg-emerald-300/20 blur-2xl" />
+      <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+        <a
+          href={wp}
+          target="_blank"
+          rel="noreferrer"
+          className="rounded-2xl bg-emerald-400 px-7 py-4 text-center text-sm font-black text-[#10251b] shadow-xl shadow-emerald-400/25 transition hover:-translate-y-1"
+        >
+          WhatsApp’tan Teklif Al
+        </a>
 
-            <motion.div
-              whileHover={{ scale: 1.015 }}
-              transition={{ duration: 0.35 }}
-              className="relative overflow-hidden rounded-[1.8rem] border border-white/15 bg-white/10 p-2 shadow-2xl sm:rounded-[2.5rem] sm:p-3"
-            >
-              <div className="relative h-[330px] overflow-hidden rounded-[1.4rem] sm:h-[440px] lg:h-[540px]">
-                <Image
-                  src={firma.heroGorsel}
-                  alt={firma.ad}
-                  fill
-                  priority
-                  sizes="(max-width: 1024px) 100vw, 50vw"
-                  className="object-cover"
-                />
-
-                <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent" />
-
-                <motion.div
-                  animate={{ x: ["-120%", "120%"] }}
-                  transition={{ duration: 3.5, repeat: Infinity, ease: "linear" }}
-                  className="absolute inset-y-0 w-1/3 rotate-12 bg-white/10 blur-2xl"
-                />
-
-                <div className="absolute bottom-0 p-5 sm:p-7">
-                  <p className="text-xs font-black uppercase tracking-[0.22em] text-emerald-200 sm:text-sm">
-                    Operasyonel Güç
-                  </p>
-                  <h2 className="mt-2 text-2xl font-black text-white sm:text-3xl">
-                    Doğru araç, düzenli ekip, kontrollü teslimat.
-                  </h2>
-                </div>
-              </div>
-            </motion.div>
-          </motion.div>
-        </div>
-      </section>
+        <a
+          href={`tel:${firma.telefon.replaceAll(" ", "")}`}
+          className="rounded-2xl border border-white/20 bg-white/10 px-7 py-4 text-center text-sm font-black text-white backdrop-blur transition hover:-translate-y-1"
+        >
+          Hemen Ara
+        </a>
+      </div>
+    </motion.div>
+  </div>
+</section>
 
       <motion.section
         id="hakkimizda"

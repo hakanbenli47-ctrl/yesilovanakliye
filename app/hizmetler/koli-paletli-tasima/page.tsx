@@ -6,14 +6,18 @@ import { motion, type Variants } from "framer-motion";
 import {
   ArrowLeft,
   ArrowRight,
+  Boxes,
   CheckCircle2,
   Clock,
   MapPin,
+  Package,
   PackageCheck,
+  Palmtree,
   Phone,
-  Route,
   ShieldCheck,
+  Store,
   Truck,
+  Warehouse,
 } from "lucide-react";
 
 const firma = {
@@ -23,61 +27,65 @@ const firma = {
   konum: "YEŞİLOVA NAKLİYAT • Yeşilova Mahallesi / İstanbul",
   mapsLink:
     "https://www.google.com/maps/place/YE%C5%9E%C4%B0LOVA+NAKL%C4%B0YAT-+%C4%B0STANBUL/@41.006394,28.6935971,17z/data=!3m1!4b1!4m6!3m5!1s0x14caa10064a901e9:0x3bf2ea107d200dc5!8m2!3d41.00639!4d28.696172!16s%2Fg%2F11ybfb7j8d",
-  heroGorsel: "/sehirler-arasi.jpg",
+  heroGorsel: "/palet.jpg",
 };
 
 const avantajlar = [
-  "Türkiye geneli taşıma",
-  "Rota ve zaman planlaması",
-  "Yük türüne uygun araç",
-  "Güvenli yükleme ve teslimat",
-  "Ticari sevkiyat desteği",
+  "Koli bazlı taşıma",
+  "Paletli yük sevkiyatı",
+  "Depo ve mağaza teslimatı",
+  "Ticari ürün taşıma",
+  "Düzenli yükleme planı",
   "Hızlı teklif ve net iletişim",
 ];
 
 const hizmetKapsami = [
   {
-    baslik: "Şehirler Arası Ticari Yük",
+    baslik: "Koli Taşımacılığı",
     aciklama:
-      "İstanbul çıkışlı veya İstanbul varışlı ticari yükler için şehirler arası düzenli taşıma hizmeti sunulur.",
+      "Koli, paket, kutulu ürün ve küçük hacimli ticari yükler için düzenli şehir içi ve şehirler arası taşıma hizmeti sunulur.",
+    ikon: Package,
   },
   {
-    baslik: "Koli & Palet Sevkiyatı",
+    baslik: "Paletli Yük Taşıma",
     aciklama:
-      "Koli, palet, paketli ürün ve işletme sevkiyatları güvenli şekilde farklı şehirlere ulaştırılır.",
+      "Palet üzerinde hazırlanan ürünler uygun araç planlamasıyla güvenli şekilde yüklenir ve teslim noktasına ulaştırılır.",
+    ikon: Boxes,
   },
   {
-    baslik: "Tekstil & Mağaza Ürünleri",
+    baslik: "Depo & Atölye Sevkiyatı",
     aciklama:
-      "Tekstil ürünleri, mağaza sevkiyatları ve üretim çıkışlı yükler için kontrollü taşıma planı yapılır.",
+      "Depo, atölye, üretim alanı ve işletmeler arasında düzenli ürün aktarımı için kontrollü taşıma süreci yürütülür.",
+    ikon: Warehouse,
   },
   {
-    baslik: "Parça Yük Taşıma",
+    baslik: "Mağaza Teslimatları",
     aciklama:
-      "Az hacimli yükler, tekil ürünler ve şehir dışı özel teslimatlar için ekonomik taşıma çözümü sağlanır.",
+      "Mağaza, şube ve satış noktalarına koli, paket ve ticari ürün teslimatları planlı şekilde gerçekleştirilir.",
+    ikon: Store,
   },
 ];
 
 const surec = [
   {
-    baslik: "Talep Alınır",
+    baslik: "Yük Bilgisi Alınır",
     aciklama:
-      "Çıkış şehri, varış şehri, yük türü, teslim süresi ve araç ihtiyacı netleştirilir.",
+      "Koli sayısı, palet durumu, yük ağırlığı, çıkış noktası, teslim adresi ve uygun tarih bilgisi alınır.",
   },
   {
-    baslik: "Rota Planlanır",
+    baslik: "Araç Planlanır",
     aciklama:
-      "Mesafe, teslim zamanı ve yol planı dikkate alınarak en uygun taşıma programı hazırlanır.",
+      "Yük hacmine ve teslimat adresine göre uygun araç, ekip ve taşıma planı hazırlanır.",
   },
   {
-    baslik: "Yükleme Yapılır",
+    baslik: "Düzenli Yükleme Yapılır",
     aciklama:
-      "Yükler araca düzenli şekilde alınır, taşıma güvenliği için kontrollü yerleştirme yapılır.",
+      "Koliler ve paletli ürünler araç içinde dengeli ve güvenli şekilde yerleştirilir.",
   },
   {
-    baslik: "Teslimat Sağlanır",
+    baslik: "Teslimat Tamamlanır",
     aciklama:
-      "Belirlenen adrese şehirler arası teslimat tamamlanır ve süreç net şekilde sonuçlandırılır.",
+      "Belirlenen depo, mağaza, atölye veya teslim noktasına kontrollü teslimat yapılır.",
   },
 ];
 
@@ -134,8 +142,8 @@ const rightReveal: Variants = {
   },
 };
 
-export default function SehirlerArasiNakliyatPage() {
-  const wp = `https://wa.me/${firma.whatsapp}?text=Merhaba,%20şehirler%20arası%20nakliyat%20hizmeti%20hakkında%20bilgi%20almak%20istiyorum.`;
+export default function KoliPaletliTasimaPage() {
+  const wp = `https://wa.me/${firma.whatsapp}?text=Merhaba,%20koli%20ve%20paletli%20taşıma%20hizmeti%20hakkında%20bilgi%20almak%20istiyorum.`;
 
   return (
     <main className="min-h-screen overflow-x-hidden bg-[#f5f7f2] text-slate-950">
@@ -145,12 +153,13 @@ export default function SehirlerArasiNakliyatPage() {
             <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-emerald-700 text-white transition group-hover:-translate-x-1">
               <ArrowLeft className="h-5 w-5" />
             </span>
+
             <div>
               <p className="text-lg font-black text-emerald-800 sm:text-2xl">
                 {firma.ad}
               </p>
               <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-slate-500 sm:text-xs">
-                Şehirler Arası Nakliyat
+                Koli & Paletli Taşıma
               </p>
             </div>
           </Link>
@@ -172,17 +181,17 @@ export default function SehirlerArasiNakliyatPage() {
         <div className="relative mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[1fr_0.9fr]">
           <motion.div variants={leftReveal} initial="hidden" animate="show">
             <p className="mb-5 inline-flex rounded-full border border-emerald-300/30 bg-white/10 px-4 py-2 text-[10px] font-black uppercase tracking-[0.22em] text-emerald-200 sm:text-xs">
-              Türkiye Geneli Profesyonel Taşıma
+              Ticari Yük ve Sevkiyat Çözümleri
             </p>
 
             <h1 className="max-w-4xl text-4xl font-black leading-tight tracking-tight sm:text-6xl lg:text-7xl">
-              Şehirler arası nakliyatta güvenli rota, kontrollü teslimat.
+              Koli ve paletli yükler için planlı taşıma hizmeti.
             </h1>
 
             <p className="mt-6 max-w-2xl text-base font-medium leading-8 text-white/75 sm:text-lg">
-              Yeşilova Nakliyat olarak İstanbul merkezli şehirler arası taşıma
-              ihtiyaçlarınızda yük türüne uygun araç, doğru rota planı ve
-              zamanında teslimat anlayışıyla profesyonel hizmet sunuyoruz.
+              Yeşilova Nakliyat olarak koli, paket, paletli ürün, depo çıkışı
+              yükler, mağaza sevkiyatları ve ticari teslimatlar için güvenli,
+              düzenli ve hızlı taşıma çözümleri sunuyoruz.
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -204,25 +213,34 @@ export default function SehirlerArasiNakliyatPage() {
             </div>
           </motion.div>
 
-          <motion.div variants={rightReveal} initial="hidden" animate="show" className="relative">
+          <motion.div
+            variants={rightReveal}
+            initial="hidden"
+            animate="show"
+            className="relative"
+          >
             <div className="absolute -inset-4 rounded-[2rem] bg-emerald-300/20 blur-2xl" />
+
             <div className="relative overflow-hidden rounded-[1.8rem] border border-white/15 bg-white/10 p-2 shadow-2xl sm:rounded-[2.5rem] sm:p-3">
               <div className="relative h-[330px] overflow-hidden rounded-[1.4rem] sm:h-[440px] lg:h-[540px]">
                 <Image
                   src={firma.heroGorsel}
-                  alt="Şehirler arası nakliyat hizmeti"
+                  alt="Koli ve paletli taşıma hizmeti"
                   fill
                   priority
                   sizes="(max-width: 1024px) 100vw, 50vw"
                   className="object-cover"
                 />
+
                 <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent" />
+
                 <div className="absolute bottom-0 p-5 sm:p-7">
                   <p className="text-xs font-black uppercase tracking-[0.22em] text-emerald-200 sm:text-sm">
-                    Türkiye Geneli Sevkiyat
+                    Depo, Mağaza ve Ticari Sevkiyat
                   </p>
+
                   <h2 className="mt-2 text-2xl font-black text-white sm:text-3xl">
-                    Uzun mesafede doğru plan, güvenli taşıma ve net teslimat.
+                    Koli ve paletli yükler için kontrollü yükleme, net teslimat.
                   </h2>
                 </div>
               </div>
@@ -243,22 +261,25 @@ export default function SehirlerArasiNakliyatPage() {
             <p className="text-xs font-black uppercase tracking-[0.28em] text-emerald-700 sm:text-sm">
               Hizmet Detayı
             </p>
+
             <h2 className="mt-4 text-3xl font-black leading-tight sm:text-5xl">
-              Şehir dışı taşımalarda doğru planlama teslimat kalitesini belirler.
+              Koli ve paletli taşımada düzenli yükleme teslimat güvenliğini artırır.
             </h2>
           </div>
 
           <div className="rounded-[1.7rem] border border-emerald-100 bg-white p-6 shadow-xl shadow-emerald-900/5 sm:rounded-[2rem] sm:p-8">
             <p className="text-base font-medium leading-8 text-slate-600 sm:text-lg">
-              Şehirler arası nakliyat, yalnızca yükün bir şehirden diğerine
-              taşınması değildir. Araç seçimi, yükleme düzeni, rota planı,
-              teslimat zamanı ve yol güvenliği birlikte değerlendirilmelidir.
+              Koli ve paletli taşıma, özellikle ticari işletmeler için düzenli
+              ve planlı yürütülmesi gereken bir süreçtir. Ürünlerin hacmi,
+              ağırlığı, teslim noktası, araç uygunluğu ve yükleme düzeni doğru
+              planlandığında sevkiyat daha hızlı ve güvenli tamamlanır.
             </p>
 
             <p className="mt-5 text-base font-medium leading-8 text-slate-600 sm:text-lg">
-              Yeşilova Nakliyat; ticari yük, tekstil, koli, palet, parça eşya
-              ve kurumsal sevkiyatlarda İstanbul merkezli olarak Türkiye geneline
-              planlı taşıma hizmeti sunar.
+              Yeşilova Nakliyat; depo, mağaza, atölye, üretim alanı ve ticari
+              işletmelerin koli ve paletli yük taşıma ihtiyaçlarına uygun araç
+              ve operasyon planı sunar. Amaç; yüklerin zarar görmeden, düzenli
+              şekilde ve zamanında teslim edilmesidir.
             </p>
           </div>
         </motion.div>
@@ -276,30 +297,37 @@ export default function SehirlerArasiNakliyatPage() {
             <p className="text-xs font-black uppercase tracking-[0.28em] text-emerald-700 sm:text-sm">
               Kapsam
             </p>
+
             <h2 className="mt-4 text-3xl font-black sm:text-5xl">
-              Şehirler arası nakliyatta hangi hizmetleri sunuyoruz?
+              Koli ve paletli taşıma hizmetinde neleri kapsıyoruz?
             </h2>
           </motion.div>
 
           <div className="grid gap-6 md:grid-cols-2">
-            {hizmetKapsami.map((item, i) => (
-              <motion.div
-                key={item.baslik}
-                variants={i % 2 === 0 ? leftReveal : rightReveal}
-                initial="hidden"
-                whileInView="show"
-                viewport={{ once: true, amount: 0.2 }}
-                className="rounded-[1.7rem] border border-slate-200 bg-[#f8faf7] p-6 shadow-lg shadow-slate-900/5 sm:rounded-[2rem] sm:p-8"
-              >
-                <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-700 text-white">
-                  <PackageCheck className="h-7 w-7" />
-                </div>
-                <h3 className="text-2xl font-black">{item.baslik}</h3>
-                <p className="mt-4 text-sm font-medium leading-7 text-slate-600">
-                  {item.aciklama}
-                </p>
-              </motion.div>
-            ))}
+            {hizmetKapsami.map((item, i) => {
+              const Icon = item.ikon;
+
+              return (
+                <motion.div
+                  key={item.baslik}
+                  variants={i % 2 === 0 ? leftReveal : rightReveal}
+                  initial="hidden"
+                  whileInView="show"
+                  viewport={{ once: true, amount: 0.2 }}
+                  className="rounded-[1.7rem] border border-slate-200 bg-[#f8faf7] p-6 shadow-lg shadow-slate-900/5 sm:rounded-[2rem] sm:p-8"
+                >
+                  <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-700 text-white">
+                    <Icon className="h-7 w-7" />
+                  </div>
+
+                  <h3 className="text-2xl font-black">{item.baslik}</h3>
+
+                  <p className="mt-4 text-sm font-medium leading-7 text-slate-600">
+                    {item.aciklama}
+                  </p>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -316,8 +344,9 @@ export default function SehirlerArasiNakliyatPage() {
             <p className="text-xs font-black uppercase tracking-[0.28em] text-emerald-700 sm:text-sm">
               Süreç
             </p>
+
             <h2 className="mt-4 text-3xl font-black sm:text-5xl">
-              Şehirler arası taşıma süreci nasıl ilerler?
+              Koli ve paletli taşıma süreci nasıl ilerler?
             </h2>
           </motion.div>
 
@@ -332,10 +361,13 @@ export default function SehirlerArasiNakliyatPage() {
                 className="relative overflow-hidden rounded-[1.7rem] bg-[#10251b] p-6 text-white shadow-xl shadow-emerald-900/10 sm:rounded-[2rem] sm:p-7"
               >
                 <div className="absolute -right-8 -top-8 h-28 w-28 rounded-full bg-emerald-400/20" />
+
                 <p className="text-4xl font-black text-emerald-300 sm:text-5xl">
                   0{i + 1}
                 </p>
+
                 <h3 className="mt-7 text-xl font-black">{item.baslik}</h3>
+
                 <p className="mt-3 text-sm font-medium leading-6 text-white/65">
                   {item.aciklama}
                 </p>
@@ -358,8 +390,9 @@ export default function SehirlerArasiNakliyatPage() {
             <p className="text-xs font-black uppercase tracking-[0.28em] text-emerald-300 sm:text-sm">
               Avantajlar
             </p>
+
             <h2 className="mt-4 text-3xl font-black leading-tight sm:text-5xl">
-              Uzun mesafede güvenli taşıma için doğru ekip ve doğru plan gerekir.
+              Ticari sevkiyatlarda doğru yükleme ve zamanında teslimat önemlidir.
             </h2>
           </motion.div>
 
@@ -394,13 +427,15 @@ export default function SehirlerArasiNakliyatPage() {
               <p className="text-xs font-black uppercase tracking-[0.28em] text-emerald-700 sm:text-sm">
                 Teklif Al
               </p>
+
               <h2 className="mt-4 text-3xl font-black sm:text-5xl">
-                Şehirler arası taşıma için hızlı fiyat alın.
+                Koli ve paletli yükleriniz için hızlı taşıma planı alın.
               </h2>
+
               <p className="mt-5 text-base font-medium leading-8 text-slate-600 sm:text-lg">
-                Çıkış şehri, varış şehri, yük türü, teslim tarihi ve araç
-                ihtiyacınızı paylaşın. Size uygun taşıma planını ve fiyatı
-                iletelim.
+                Koli sayısı, palet durumu, yük hacmi, çıkış noktası, teslim
+                adresi ve uygun tarih bilgisini paylaşın. Size uygun araç ve
+                taşıma planını oluşturalım.
               </p>
             </div>
 
@@ -421,29 +456,42 @@ export default function SehirlerArasiNakliyatPage() {
                 {firma.telefon}
               </a>
 
+              <a
+                href={firma.mapsLink}
+                target="_blank"
+                rel="noreferrer"
+                className="mt-4 flex min-h-14 items-center justify-center rounded-2xl border border-emerald-200 bg-white px-6 text-center text-sm font-black text-emerald-800 transition hover:-translate-y-1 hover:bg-emerald-50 sm:min-h-16"
+              >
+                Google Haritalar’da Aç
+              </a>
+
               <div className="mt-5 grid gap-3 text-sm font-bold text-slate-600">
                 <div className="flex items-center gap-3 rounded-2xl bg-white p-4">
                   <MapPin className="h-5 w-5 text-emerald-700" />
-                  İstanbul çıkışlı Türkiye geneli hizmet
+                  {firma.konum}
                 </div>
-                <div className="flex items-center gap-3 rounded-2xl bg-white p-4">
-                  <Route className="h-5 w-5 text-emerald-700" />
-                  Rota ve teslimat planlaması
-                </div>
+
                 <div className="flex items-center gap-3 rounded-2xl bg-white p-4">
                   <Clock className="h-5 w-5 text-emerald-700" />
-                  Zamanında teslimat yaklaşımı
+                  Sevkiyat planına uygun teslimat
                 </div>
+
                 <div className="flex items-center gap-3 rounded-2xl bg-white p-4">
                   <ShieldCheck className="h-5 w-5 text-emerald-700" />
-                  Güvenli taşıma süreci
+                  Güvenli yükleme ve taşıma süreci
+                </div>
+
+                <div className="flex items-center gap-3 rounded-2xl bg-white p-4">
+                  <Phone className="h-5 w-5 text-emerald-700" />
+                  Hızlı teklif ve operasyon desteği
                 </div>
               </div>
             </div>
           </div>
         </motion.div>
       </section>
- <section className="bg-white px-4 pb-16 sm:pb-20">
+
+      <section className="bg-white px-4 pb-16 sm:pb-20">
         <motion.div
           variants={fadeUp}
           initial="hidden"
@@ -490,12 +538,13 @@ export default function SehirlerArasiNakliyatPage() {
           </div>
         </motion.div>
       </section>
+
       <footer className="bg-[#10251b] px-4 py-10 text-white">
         <div className="mx-auto flex max-w-7xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <p className="text-xl font-black">{firma.ad}</p>
             <p className="text-sm text-white/60">
-              Şehirler arası nakliyat ve profesyonel taşıma çözümleri.
+              Koli, palet ve profesyonel ticari taşıma çözümleri.
             </p>
           </div>
 
