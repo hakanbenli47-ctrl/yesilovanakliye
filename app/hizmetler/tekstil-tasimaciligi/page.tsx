@@ -26,6 +26,7 @@ const firma = {
     "https://www.google.com/maps/place/YE%C5%9E%C4%B0LOVA+NAKL%C4%B0YAT-+%C4%B0STANBUL/@41.006394,28.6935971,17z/data=!3m1!4b1!4m6!3m5!1s0x14caa10064a901e9:0x3bf2ea107d200dc5!8m2!3d41.00639!4d28.696172!16s%2Fg%2F11ybfb7j8d",
   heroGorsel: "/tekstil.jpg",
 };
+
 const avantajlar = [
   "Askılı tekstil taşıma",
   "Koli bazlı ürün sevkiyatı",
@@ -142,19 +143,19 @@ export default function TekstilTasimaciligiPage() {
   const wp = `https://wa.me/${firma.whatsapp}?text=Merhaba,%20tekstil%20taşımacılığı%20hakkında%20bilgi%20almak%20istiyorum.`;
 
   return (
-    <main className="min-h-screen overflow-x-hidden bg-[#f5f7f2] text-slate-950">
-      <header className="sticky top-0 z-50 border-b border-emerald-900/10 bg-white/95 px-4 backdrop-blur-xl">
+    <main className="min-h-screen overflow-x-hidden bg-[#f4f4f4] text-zinc-950">
+      <header className="sticky top-0 z-50 border-b border-zinc-200 bg-white/95 px-4 backdrop-blur-xl">
         <div className="mx-auto flex max-w-7xl items-center justify-between py-4">
           <Link href="/" className="group flex items-center gap-3">
-            <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-emerald-700 text-white transition group-hover:-translate-x-1">
+            <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-black text-white transition group-hover:-translate-x-1">
               <ArrowLeft className="h-5 w-5" />
             </span>
 
             <div>
-              <p className="text-lg font-black text-emerald-800 sm:text-2xl">
+              <p className="text-lg font-black text-black sm:text-2xl">
                 {firma.ad}
               </p>
-              <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-slate-500 sm:text-xs">
+              <p className="text-[10px] font-bold uppercase tracking-[0.18em] text-zinc-500 sm:text-xs">
                 Tekstil Taşımacılığı
               </p>
             </div>
@@ -164,19 +165,19 @@ export default function TekstilTasimaciligiPage() {
             href={wp}
             target="_blank"
             rel="noreferrer"
-            className="rounded-full bg-emerald-700 px-5 py-3 text-sm font-black text-white shadow-lg shadow-emerald-800/20 transition hover:-translate-y-0.5 hover:bg-emerald-800"
+            className="rounded-full bg-black px-5 py-3 text-sm font-black text-white shadow-lg shadow-black/20 transition hover:-translate-y-0.5 hover:bg-zinc-800"
           >
             Teklif Al
           </a>
         </div>
       </header>
 
-      <section className="relative overflow-hidden bg-[#10251b] px-4 py-16 text-white sm:py-20 lg:py-24">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,#34d39944,transparent_28%),radial-gradient(circle_at_85%_15%,#a3e63533,transparent_24%)]" />
+      <section className="relative overflow-hidden bg-black px-4 py-16 text-white sm:py-20 lg:py-24">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.16),transparent_28%),radial-gradient(circle_at_85%_15%,rgba(255,255,255,0.10),transparent_24%)]" />
 
         <div className="relative mx-auto grid max-w-7xl items-center gap-10 lg:grid-cols-[1fr_0.9fr]">
           <motion.div variants={leftReveal} initial="hidden" animate="show">
-            <p className="mb-5 inline-flex rounded-full border border-emerald-300/30 bg-white/10 px-4 py-2 text-[10px] font-black uppercase tracking-[0.22em] text-emerald-200 sm:text-xs">
+            <p className="mb-5 inline-flex rounded-full border border-white/20 bg-white/10 px-4 py-2 text-[10px] font-black uppercase tracking-[0.22em] text-zinc-200 sm:text-xs">
               Profesyonel Tekstil Sevkiyatı
             </p>
 
@@ -195,14 +196,14 @@ export default function TekstilTasimaciligiPage() {
                 href={wp}
                 target="_blank"
                 rel="noreferrer"
-                className="rounded-2xl bg-emerald-400 px-7 py-4 text-center text-sm font-black text-[#10251b] shadow-xl shadow-emerald-400/25 transition hover:-translate-y-1"
+                className="rounded-2xl bg-white px-7 py-4 text-center text-sm font-black text-black shadow-xl shadow-white/20 transition hover:-translate-y-1 hover:bg-zinc-200"
               >
                 WhatsApp’tan Teklif Al
               </a>
 
               <a
                 href={`tel:${firma.telefon.replaceAll(" ", "")}`}
-                className="rounded-2xl border border-white/20 bg-white/10 px-7 py-4 text-center text-sm font-black text-white backdrop-blur transition hover:-translate-y-1"
+                className="rounded-2xl border border-white/20 bg-white/10 px-7 py-4 text-center text-sm font-black text-white backdrop-blur transition hover:-translate-y-1 hover:bg-white/15"
               >
                 Hemen Ara
               </a>
@@ -215,7 +216,7 @@ export default function TekstilTasimaciligiPage() {
             animate="show"
             className="relative"
           >
-            <div className="absolute -inset-4 rounded-[2rem] bg-emerald-300/20 blur-2xl" />
+            <div className="absolute -inset-4 rounded-[2rem] bg-white/10 blur-2xl" />
 
             <div className="relative overflow-hidden rounded-[1.8rem] border border-white/15 bg-white/10 p-2 shadow-2xl sm:rounded-[2.5rem] sm:p-3">
               <div className="relative h-[330px] overflow-hidden rounded-[1.4rem] sm:h-[440px] lg:h-[540px]">
@@ -228,14 +229,12 @@ export default function TekstilTasimaciligiPage() {
                   className="object-cover"
                 />
 
-                <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent" />
-
                 <div className="absolute bottom-0 p-5 sm:p-7">
-                  <p className="text-xs font-black uppercase tracking-[0.22em] text-emerald-200 sm:text-sm">
+                  <p className="text-xs font-black uppercase tracking-[0.22em] text-white sm:text-sm">
                     Mağaza, Depo ve Üretim Sevkiyatı
                   </p>
 
-                  <h2 className="mt-2 text-2xl font-black text-white sm:text-3xl">
+                  <h2 className="mt-2 text-2xl font-black text-white drop-shadow-[0_2px_8px_rgba(0,0,0,0.55)] sm:text-3xl">
                     Tekstil yükleri için düzenli araç ve kontrollü teslimat.
                   </h2>
                 </div>
@@ -254,24 +253,24 @@ export default function TekstilTasimaciligiPage() {
           className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.9fr_1.1fr]"
         >
           <div>
-            <p className="text-xs font-black uppercase tracking-[0.28em] text-emerald-700 sm:text-sm">
+            <p className="text-xs font-black uppercase tracking-[0.28em] text-zinc-600 sm:text-sm">
               Hizmet Detayı
             </p>
 
-            <h2 className="mt-4 text-3xl font-black leading-tight sm:text-5xl">
+            <h2 className="mt-4 text-3xl font-black leading-tight text-black sm:text-5xl">
               Tekstil taşımacılığında ürün düzeni ve teslimat zamanı kritiktir.
             </h2>
           </div>
 
-          <div className="rounded-[1.7rem] border border-emerald-100 bg-white p-6 shadow-xl shadow-emerald-900/5 sm:rounded-[2rem] sm:p-8">
-            <p className="text-base font-medium leading-8 text-slate-600 sm:text-lg">
+          <div className="rounded-[1.7rem] border border-zinc-200 bg-white p-6 shadow-xl shadow-black/5 sm:rounded-[2rem] sm:p-8">
+            <p className="text-base font-medium leading-8 text-zinc-600 sm:text-lg">
               Tekstil taşımacılığı, ürünlerin yapısı gereği dikkat ve düzen
               isteyen bir süreçtir. Askılı ürünler, koli bazlı hazır giyim,
               mağaza sevkiyatları ve üretim çıkışlı yükler için doğru araç ve
               doğru yükleme düzeni gerekir.
             </p>
 
-            <p className="mt-5 text-base font-medium leading-8 text-slate-600 sm:text-lg">
+            <p className="mt-5 text-base font-medium leading-8 text-zinc-600 sm:text-lg">
               Yeşilova Nakliyat; tekstil firmaları, mağazalar, atölyeler,
               depolar ve üretim noktaları için İstanbul merkezli planlı taşıma
               çözümleri sunar. Amaç; ürünlerin düzenli, kontrollü ve zamanında
@@ -290,11 +289,11 @@ export default function TekstilTasimaciligiPage() {
             viewport={{ once: true, amount: 0.22 }}
             className="mb-10 max-w-3xl"
           >
-            <p className="text-xs font-black uppercase tracking-[0.28em] text-emerald-700 sm:text-sm">
+            <p className="text-xs font-black uppercase tracking-[0.28em] text-zinc-600 sm:text-sm">
               Kapsam
             </p>
 
-            <h2 className="mt-4 text-3xl font-black sm:text-5xl">
+            <h2 className="mt-4 text-3xl font-black text-black sm:text-5xl">
               Tekstil taşımacılığında hangi hizmetleri sunuyoruz?
             </h2>
           </motion.div>
@@ -310,15 +309,17 @@ export default function TekstilTasimaciligiPage() {
                   initial="hidden"
                   whileInView="show"
                   viewport={{ once: true, amount: 0.2 }}
-                  className="rounded-[1.7rem] border border-slate-200 bg-[#f8faf7] p-6 shadow-lg shadow-slate-900/5 sm:rounded-[2rem] sm:p-8"
+                  className="rounded-[1.7rem] border border-zinc-200 bg-zinc-50 p-6 shadow-lg shadow-black/5 sm:rounded-[2rem] sm:p-8"
                 >
-                  <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-700 text-white">
+                  <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-black text-white">
                     <Icon className="h-7 w-7" />
                   </div>
 
-                  <h3 className="text-2xl font-black">{item.baslik}</h3>
+                  <h3 className="text-2xl font-black text-black">
+                    {item.baslik}
+                  </h3>
 
-                  <p className="mt-4 text-sm font-medium leading-7 text-slate-600">
+                  <p className="mt-4 text-sm font-medium leading-7 text-zinc-600">
                     {item.aciklama}
                   </p>
                 </motion.div>
@@ -337,11 +338,11 @@ export default function TekstilTasimaciligiPage() {
             viewport={{ once: true, amount: 0.22 }}
             className="mb-10 text-center"
           >
-            <p className="text-xs font-black uppercase tracking-[0.28em] text-emerald-700 sm:text-sm">
+            <p className="text-xs font-black uppercase tracking-[0.28em] text-zinc-600 sm:text-sm">
               Süreç
             </p>
 
-            <h2 className="mt-4 text-3xl font-black sm:text-5xl">
+            <h2 className="mt-4 text-3xl font-black text-black sm:text-5xl">
               Tekstil taşıma süreci nasıl ilerler?
             </h2>
           </motion.div>
@@ -354,11 +355,11 @@ export default function TekstilTasimaciligiPage() {
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true, amount: 0.2 }}
-                className="relative overflow-hidden rounded-[1.7rem] bg-[#10251b] p-6 text-white shadow-xl shadow-emerald-900/10 sm:rounded-[2rem] sm:p-7"
+                className="relative overflow-hidden rounded-[1.7rem] bg-black p-6 text-white shadow-xl shadow-black/10 sm:rounded-[2rem] sm:p-7"
               >
-                <div className="absolute -right-8 -top-8 h-28 w-28 rounded-full bg-emerald-400/20" />
+                <div className="absolute -right-8 -top-8 h-28 w-28 rounded-full bg-white/10" />
 
-                <p className="text-4xl font-black text-emerald-300 sm:text-5xl">
+                <p className="text-4xl font-black text-zinc-300 sm:text-5xl">
                   0{i + 1}
                 </p>
 
@@ -373,8 +374,8 @@ export default function TekstilTasimaciligiPage() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-[#10251b] px-4 py-16 text-white sm:py-20">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_10%_20%,#22c55e30,transparent_32%)]" />
+      <section className="relative overflow-hidden bg-black px-4 py-16 text-white sm:py-20">
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_10%_20%,rgba(255,255,255,0.14),transparent_32%)]" />
 
         <div className="relative mx-auto grid max-w-7xl gap-9 lg:grid-cols-2">
           <motion.div
@@ -383,7 +384,7 @@ export default function TekstilTasimaciligiPage() {
             whileInView="show"
             viewport={{ once: true, amount: 0.22 }}
           >
-            <p className="text-xs font-black uppercase tracking-[0.28em] text-emerald-300 sm:text-sm">
+            <p className="text-xs font-black uppercase tracking-[0.28em] text-zinc-300 sm:text-sm">
               Avantajlar
             </p>
 
@@ -402,7 +403,7 @@ export default function TekstilTasimaciligiPage() {
                 viewport={{ once: true, amount: 0.2 }}
                 className="flex items-center gap-3 rounded-2xl border border-white/10 bg-white/10 p-5 font-bold text-white/85 backdrop-blur"
               >
-                <CheckCircle2 className="h-5 w-5 shrink-0 text-emerald-300" />
+                <CheckCircle2 className="h-5 w-5 shrink-0 text-zinc-300" />
                 {item}
               </motion.div>
             ))}
@@ -416,60 +417,60 @@ export default function TekstilTasimaciligiPage() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.22 }}
-          className="mx-auto max-w-7xl overflow-hidden rounded-[1.8rem] bg-white p-6 shadow-2xl shadow-emerald-900/10 sm:rounded-[2.5rem] sm:p-12"
+          className="mx-auto max-w-7xl overflow-hidden rounded-[1.8rem] bg-white p-6 shadow-2xl shadow-black/10 sm:rounded-[2.5rem] sm:p-12"
         >
           <div className="grid gap-8 lg:grid-cols-[1fr_0.8fr]">
             <div>
-              <p className="text-xs font-black uppercase tracking-[0.28em] text-emerald-700 sm:text-sm">
+              <p className="text-xs font-black uppercase tracking-[0.28em] text-zinc-600 sm:text-sm">
                 Teklif Al
               </p>
 
-              <h2 className="mt-4 text-3xl font-black sm:text-5xl">
+              <h2 className="mt-4 text-3xl font-black text-black sm:text-5xl">
                 Tekstil sevkiyatınız için hızlı taşıma planı alın.
               </h2>
 
-              <p className="mt-5 text-base font-medium leading-8 text-slate-600 sm:text-lg">
+              <p className="mt-5 text-base font-medium leading-8 text-zinc-600 sm:text-lg">
                 Ürün türü, koli veya askılı taşıma ihtiyacı, çıkış noktası,
                 teslim adresi ve uygun tarih bilgisini paylaşın. Size uygun
                 araç ve taşıma planını oluşturalım.
               </p>
             </div>
 
-            <div className="rounded-[1.5rem] bg-emerald-50 p-5 sm:rounded-[2rem] sm:p-6">
+            <div className="rounded-[1.5rem] bg-zinc-100 p-5 sm:rounded-[2rem] sm:p-6">
               <a
                 href={wp}
                 target="_blank"
                 rel="noreferrer"
-                className="flex min-h-14 items-center justify-center rounded-2xl bg-emerald-700 px-6 text-center text-sm font-black text-white shadow-lg shadow-emerald-700/20 transition hover:-translate-y-1 hover:bg-emerald-800 sm:min-h-16"
+                className="flex min-h-14 items-center justify-center rounded-2xl bg-black px-6 text-center text-sm font-black text-white shadow-lg shadow-black/20 transition hover:-translate-y-1 hover:bg-zinc-800 sm:min-h-16"
               >
                 WhatsApp’tan Teklif Al
               </a>
 
               <a
                 href={`tel:${firma.telefon.replaceAll(" ", "")}`}
-                className="mt-4 flex min-h-14 items-center justify-center rounded-2xl border border-emerald-200 bg-white px-6 text-center text-sm font-black text-emerald-800 transition hover:-translate-y-1 sm:min-h-16"
+                className="mt-4 flex min-h-14 items-center justify-center rounded-2xl border border-zinc-300 bg-white px-6 text-center text-sm font-black text-black transition hover:-translate-y-1 hover:bg-zinc-50 sm:min-h-16"
               >
                 {firma.telefon}
               </a>
 
-              <div className="mt-5 grid gap-3 text-sm font-bold text-slate-600">
+              <div className="mt-5 grid gap-3 text-sm font-bold text-zinc-600">
                 <div className="flex items-center gap-3 rounded-2xl bg-white p-4">
-                  <MapPin className="h-5 w-5 text-emerald-700" />
+                  <MapPin className="h-5 w-5 text-black" />
                   İstanbul içi ve şehir dışı tekstil sevkiyatı
                 </div>
 
                 <div className="flex items-center gap-3 rounded-2xl bg-white p-4">
-                  <Clock className="h-5 w-5 text-emerald-700" />
+                  <Clock className="h-5 w-5 text-black" />
                   Mağaza ve depo teslimat planlaması
                 </div>
 
                 <div className="flex items-center gap-3 rounded-2xl bg-white p-4">
-                  <ShieldCheck className="h-5 w-5 text-emerald-700" />
+                  <ShieldCheck className="h-5 w-5 text-black" />
                   Ürün düzenini koruyan taşıma süreci
                 </div>
 
                 <div className="flex items-center gap-3 rounded-2xl bg-white p-4">
-                  <Phone className="h-5 w-5 text-emerald-700" />
+                  <Phone className="h-5 w-5 text-black" />
                   Hızlı teklif ve operasyon desteği
                 </div>
               </div>
@@ -477,17 +478,18 @@ export default function TekstilTasimaciligiPage() {
           </div>
         </motion.div>
       </section>
- <section className="bg-white px-4 pb-16 sm:pb-20">
+
+      <section className="bg-white px-4 pb-16 sm:pb-20">
         <motion.div
           variants={fadeUp}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.22 }}
-          className="mx-auto max-w-7xl overflow-hidden rounded-[1.8rem] border border-emerald-100 shadow-2xl shadow-emerald-900/10 sm:rounded-[2.5rem]"
+          className="mx-auto max-w-7xl overflow-hidden rounded-[1.8rem] border border-zinc-200 shadow-2xl shadow-black/10 sm:rounded-[2.5rem]"
         >
           <div className="grid lg:grid-cols-[0.9fr_1.1fr]">
-            <div className="bg-[#10251b] p-6 text-white sm:p-10">
-              <p className="text-xs font-black uppercase tracking-[0.28em] text-emerald-300 sm:text-sm">
+            <div className="bg-black p-6 text-white sm:p-10">
+              <p className="text-xs font-black uppercase tracking-[0.28em] text-zinc-300 sm:text-sm">
                 Konumumuz
               </p>
 
@@ -504,7 +506,7 @@ export default function TekstilTasimaciligiPage() {
                 href={firma.mapsLink}
                 target="_blank"
                 rel="noreferrer"
-                className="mt-8 inline-flex rounded-2xl bg-emerald-400 px-7 py-4 text-sm font-black text-[#10251b] shadow-xl shadow-emerald-400/25 transition hover:-translate-y-1"
+                className="mt-8 inline-flex rounded-2xl bg-white px-7 py-4 text-sm font-black text-black shadow-xl shadow-white/20 transition hover:-translate-y-1 hover:bg-zinc-200"
               >
                 Google Maps’te Aç
               </a>
@@ -518,13 +520,14 @@ export default function TekstilTasimaciligiPage() {
                 loading="lazy"
                 allowFullScreen
                 referrerPolicy="no-referrer-when-downgrade"
-                className="absolute inset-0 h-full w-full border-0"
+                className="absolute inset-0 h-full w-full border-0 grayscale"
               />
             </div>
           </div>
         </motion.div>
       </section>
-      <footer className="bg-[#10251b] px-4 py-10 text-white">
+
+      <footer className="bg-black px-4 py-10 text-white">
         <div className="mx-auto flex max-w-7xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <p className="text-xl font-black">{firma.ad}</p>
@@ -535,7 +538,7 @@ export default function TekstilTasimaciligiPage() {
 
           <Link
             href="/"
-            className="inline-flex items-center gap-2 text-sm font-black text-emerald-300"
+            className="inline-flex items-center gap-2 text-sm font-black text-zinc-300 transition hover:text-white"
           >
             Ana sayfaya dön
             <ArrowRight className="h-4 w-4" />
